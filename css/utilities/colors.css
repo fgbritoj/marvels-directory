@@ -1,0 +1,45 @@
+:root {
+    --w: #ffffff;
+
+    --g100: #cccccc;
+    --g200: #767676;
+    --g300: #202020;
+    --g400: #151515;
+    
+    --b: #000000;
+    
+    --r100: #9f0013;
+    --r200: #ec1d21;
+}
+
+.color-w {
+    color: var(--w);
+}
+
+.color-b {
+    color: var(--b);
+}
+
+.color-g1 {
+    color: var(--g100);
+}
+
+.color-g2 {
+    color: var(--g200);
+}
+
+.color-g3 {
+    color: var(--g300);
+}
+
+.color-g4 {
+    color: var(--g400);
+}
+
+.color-r1 {
+    color: var(--r100);
+}
+
+.color-r2 {
+    color: var(--r200);
+}

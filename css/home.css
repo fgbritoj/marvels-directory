@@ -1,0 +1,9 @@
+#main.home {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 50vh;
+}

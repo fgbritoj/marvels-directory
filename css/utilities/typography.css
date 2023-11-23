@@ -1,0 +1,27 @@
+.h1 {
+    font: 600 3rem/1.5 "Roboto", sans-serif;
+}
+
+.h2 {
+    font: 700 2.5rem/1.5 "Roboto", sans-serif;
+}
+
+.h3 {
+    font: 700 1.65rem/1.5 "Roboto", sans-serif;
+}
+
+.h4 {
+    font: 700 1.125rem/1.5 "Roboto", sans-serif;
+}
+
+.body {
+    font: 400 1rem/1.5 "Roboto", sans-serif;
+}
+
+.small {
+    font: 400 0.875rem/1.5 "Roboto", sans-serif;
+}
+
+.tiny {
+    font: 400 0.625rem/1.5 "Roboto", sans-serif;
+}
