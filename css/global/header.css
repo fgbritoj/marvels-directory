@@ -40,6 +40,121 @@
     transition: 0.3s ease;
 }
 
-.header-menu ul li a:hover::after {
+.header-menu ul li a:hover::after,
+.header-menu ul li a.activated::after {
     height: 8px;
+}
+
+#menu-button {
+    display: flex;
+}
+
+@media (max-width: 900px) {
+    #header {
+        padding: 16px 20px;
+    }
+
+    .header-menu ul {
+        gap: 8px;
+    }
+}
+
+.header-menu a:hover::after,
+.header-menu a.active::after {
+    height: 100%;
+}
+
+@media (max-width: 800px) {
+
+    #menu-button {
+        display: flex;
+        position: relative;
+        border-top: 2px solid var(--w);
+        background-color: var(--w);
+        width: 33px;
+        margin-top: -10px;
+    }
+    
+    #menu-button::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 33px;
+        height: 2px;
+        background-color: var(--w);
+        top: 8px;
+        transition: 0.3s;
+    }
+
+      #menu-button::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 33px;
+        height: 2px;
+        background-color: var(--w);
+        top: 18px;
+        transition: 0.3s;
+    }
+
+    #menu-button.active {
+        border: none;
+    }
+
+    #menu-button.active::before {
+        transform: rotate(135deg);
+        top: 7.5px;
+        height: 3px;
+    }
+
+    #menu-button.active::after {
+        transform: rotate(-135deg);
+        top: 8px;
+        height: 3px;
+    }
+    
+    .header-menu ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding-left: 20px;
+        left: 0px;
+        top: 88px;
+        width: 100vw;
+        height: 0;
+        background-color: var(--r200);
+        gap: 32px;
+        z-index: 100;
+        transition: 0.6s;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    .header-menu ul li:first-child {
+        width: calc(100% - 20px);
+        margin-top: 20px;
+        padding-top: 30px;
+        border-top: 2px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .header-menu ul.active {
+        visibility: visible;
+        overflow-y: auto;
+        height: calc(100vh - 88px);
+    }
+
+    .header-menu ul li a {
+        padding: 16px auto 16px 0;
+        background-color: var(--r200);
+        width: 100vw;
+    }
+
+    .header-menu ul li a::after {
+        display: none;
+    }
+/* 
+    #menu-button.active #header {
+        border-bottom: 2px solid var(--g200);
+    } */
 }
